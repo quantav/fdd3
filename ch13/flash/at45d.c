@@ -56,7 +56,7 @@ struct at45d_softc {
 	struct proc		       *at45d_proc;
 };
 
-static devclass_t at45d_devclass;
+//static devclass_t at45d_devclass;
 
 static void				at45d_delayed_attach(void *);
 static void				at45d_task(void *);
@@ -247,4 +247,4 @@ static driver_t at45d_driver = {
 	sizeof(struct at45d_softc)
 };
 
-DRIVER_MODULE(at45d, spibus, at45d_driver, at45d_devclass, 0, 0);
+DRIVER_MODULE(at45d, spibus, at45d_driver, 0, 0);

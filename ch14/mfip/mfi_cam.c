@@ -63,7 +63,7 @@ struct mfip {
 	struct cam_path		*path;
 };
 
-static devclass_t		mfip_devclass;
+//static devclass_t		mfip_devclass;
 
 static void			mfip_action(struct cam_sim *, union ccb *);
 static void			mfip_poll(struct cam_sim *);
@@ -380,6 +380,6 @@ static driver_t mfip_driver = {
 	sizeof(struct mfip)
 };
 
-DRIVER_MODULE(mfip, mfi, mfip_driver, mfip_devclass, 0, 0);
+DRIVER_MODULE(mfip, mfi, mfip_driver, 0, 0);
 MODULE_DEPEND(mfip, cam, 1, 1, 1);
 MODULE_DEPEND(mfip, mfi, 1, 1, 1);

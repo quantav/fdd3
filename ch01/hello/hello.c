@@ -34,6 +34,7 @@
 #include <sys/kernel.h>
 #include <sys/systm.h>
 
+
 static int
 hello_modevent(module_t mod __unused, int event, void *arg __unused)
 {
